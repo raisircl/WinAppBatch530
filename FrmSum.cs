@@ -16,5 +16,39 @@ namespace WinAppBatch530
         {
             InitializeComponent();
         }
+
+       
+        private void btnOperations_Click(object disha, EventArgs e)
+        {
+            Button x=(Button)disha;
+
+            if (x.Text == "+")
+            {
+                lblResult.Text = Convert.ToString(Convert.ToInt32(txtN1.Text) + Convert.ToInt32(txtN2.Text));
+            }
+            else if(x.Text == "-") {
+                lblResult.Text = Convert.ToString(Convert.ToInt32(txtN1.Text) - Convert.ToInt32(txtN2.Text));
+
+            }
+            else if(x.Text=="*"){
+                lblResult.Text = Convert.ToString(Convert.ToInt32(txtN1.Text) * Convert.ToInt32(txtN2.Text));
+
+            }
+            else if(x.Text == "/")
+            {
+                lblResult.Text = Convert.ToString(Convert.ToInt32(txtN1.Text) / Convert.ToInt32(txtN2.Text));
+
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmSum_MouseMove(object sender, MouseEventArgs e)
+        {
+            label4.Text=e.X.ToString()+", " + e.Y.ToString(); 
+        }
     }
 }
