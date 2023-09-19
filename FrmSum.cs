@@ -18,9 +18,9 @@ namespace WinAppBatch530
         }
 
        
-        private void btnOperations_Click(object disha, EventArgs e)
+        private void btnOperations_Click(object sender, EventArgs e)
         {
-            Button x=(Button)disha;
+            Button x=(Button)sender;
 
             if (x.Text == "+")
             {
@@ -40,15 +40,11 @@ namespace WinAppBatch530
 
             }
         }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmSum_MouseMove(object sender, MouseEventArgs e)
         {
             label4.Text=e.X.ToString()+", " + e.Y.ToString(); 
         }
+
+       
     }
 }

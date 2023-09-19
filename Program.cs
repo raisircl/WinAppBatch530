@@ -16,7 +16,7 @@ namespace WinAppBatch530
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSum());
+            Application.Run(new Form2());
         }
     }
 }

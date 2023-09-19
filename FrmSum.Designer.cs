@@ -138,7 +138,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(899, 182);
+            this.button1.Location = new System.Drawing.Point(638, 60);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(221, 84);
             this.button1.TabIndex = 10;
@@ -154,7 +154,6 @@
             this.checkBox1.TabIndex = 11;
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label4
             // 
@@ -187,6 +186,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "FrmSum";
             this.Text = "Sum of 2 Numbers";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmSum_MouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
