@@ -49,6 +49,8 @@ namespace WinAppBatch530
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if(rbMale.Checked)
+            {
 
                 MessageBox.Show($"Hello Mr. {txtName.Text}");
             }
