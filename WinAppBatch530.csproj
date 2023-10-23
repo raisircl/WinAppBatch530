@@ -88,6 +88,12 @@
     <Compile Include="Form7.Designer.cs">
       <DependentUpon>Form7.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSqlDept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSqlDept.Designer.cs">
+      <DependentUpon>FrmSqlDept.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSum.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form7.resx">
       <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSqlDept.resx">
+      <DependentUpon>FrmSqlDept.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSum.resx">
       <DependentUpon>FrmSum.cs</DependentUpon>
