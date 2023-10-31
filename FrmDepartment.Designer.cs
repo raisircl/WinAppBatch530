@@ -50,6 +50,7 @@
             this.btnReset.TabIndex = 32;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // dgv1
             // 
@@ -131,6 +132,7 @@
             // 
             this.txtDNo.Location = new System.Drawing.Point(192, 22);
             this.txtDNo.Name = "txtDNo";
+            this.txtDNo.ReadOnly = true;
             this.txtDNo.Size = new System.Drawing.Size(309, 41);
             this.txtDNo.TabIndex = 23;
             // 

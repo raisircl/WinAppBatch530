@@ -111,6 +111,7 @@ namespace WinAppBatch530
             comm.Parameters.Clear();
 
             MessageBox.Show($"Data Save and Affected Rows are {x}");
+            reset();
 
         }
 
@@ -132,6 +133,7 @@ namespace WinAppBatch530
 
                 MessageBox.Show($"Data Updated and Affected Rows are {x}");
                 ci = -1;
+                reset();
                 fetchdata();
             }
             else
@@ -157,6 +159,7 @@ namespace WinAppBatch530
 
                 MessageBox.Show($"Data Deleted and Affected Rows are {x}");
                 ci = -1;
+                reset();
                 fetchdata();
             }
             else
@@ -174,6 +177,18 @@ namespace WinAppBatch530
                 txtDName.Text = dgv1.Rows[ci].Cells["DName"].Value.ToString();
                 txtLoc.Text = dgv1.Rows[ci].Cells["Loc"].Value.ToString();
             }
+        }
+        void reset()
+        {
+            txtDNo.Text = "";
+            txtDName.Text = "";
+            txtLoc.Text = "";
+            ci = -1;
+            txtDName.Focus();
+        }
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            reset();
         }
     }
 }
