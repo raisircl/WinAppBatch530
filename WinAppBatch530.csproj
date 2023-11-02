@@ -94,6 +94,12 @@
     <Compile Include="FrmDepartment.Designer.cs">
       <DependentUpon>FrmDepartment.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmp.Designer.cs">
+      <DependentUpon>FrmEmp.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSqlDept.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDepartment.resx">
       <DependentUpon>FrmDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmp.resx">
+      <DependentUpon>FrmEmp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSqlDept.resx">
       <DependentUpon>FrmSqlDept.cs</DependentUpon>

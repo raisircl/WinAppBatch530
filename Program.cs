@@ -16,7 +16,7 @@ namespace WinAppBatch530
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmDepartment());
+            Application.Run(new FrmEmp());
         }
     }
 }
