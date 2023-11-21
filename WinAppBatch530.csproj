@@ -100,6 +100,12 @@
     <Compile Include="FrmEmp.Designer.cs">
       <DependentUpon>FrmEmp.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMdI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMdI.Designer.cs">
+      <DependentUpon>FrmMdI.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSqlDept.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     <EmbeddedResource Include="FrmEmp.resx">
       <DependentUpon>FrmEmp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMdI.resx">
+      <DependentUpon>FrmMdI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSqlDept.resx">
       <DependentUpon>FrmSqlDept.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +193,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rb.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

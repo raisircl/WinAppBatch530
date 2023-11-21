@@ -60,5 +60,10 @@ namespace WinAppBatch530
 
             loadgrid();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new FrmEmp().Show();
+        }
     }
 }

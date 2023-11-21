@@ -88,9 +88,9 @@ namespace WinAppBatch530
         void fetchdata()
         {
             ds.Tables.Clear();
-            comm.CommandText = "select * from rai.tblDept";
+            comm.CommandText = "sp_fetchdept";
             comm.Connection = conn;
-            comm.CommandType = CommandType.Text;
+            comm.CommandType = CommandType.StoredProcedure;
             da.SelectCommand = comm;
 
             da.Fill(ds, "dept");
@@ -99,9 +99,9 @@ namespace WinAppBatch530
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            comm.CommandText = "insert into rai.tbldept values(@dname,@loc)";
+            comm.CommandText = "sp_insertdept";
             comm.Connection = conn;
-            comm.CommandType=CommandType.Text;
+            comm.CommandType=CommandType.StoredProcedure;
             comm.Parameters.AddWithValue("@dname", txtDName.Text);
             comm.Parameters.AddWithValue("@loc", txtLoc.Text);
             
@@ -109,7 +109,7 @@ namespace WinAppBatch530
             int x=comm.ExecuteNonQuery();
             conn.Close();
             comm.Parameters.Clear();
-
+            fetchdata();
             MessageBox.Show($"Data Save and Affected Rows are {x}");
             reset();
 
@@ -119,9 +119,9 @@ namespace WinAppBatch530
         {
             if (ci > -1)
             {
-                comm.CommandText = "update rai.tblDept set DName=@dname, Loc=@loc where DNo=@dno";
+                comm.CommandText = "sp_updatedept";
                 comm.Connection = conn;
-                comm.CommandType = CommandType.Text;
+                comm.CommandType = CommandType.StoredProcedure;
                 comm.Parameters.AddWithValue("@dname", txtDName.Text);
                 comm.Parameters.AddWithValue("@loc", txtLoc.Text);
                 comm.Parameters.AddWithValue("@dno", txtDNo.Text);
@@ -146,9 +146,9 @@ namespace WinAppBatch530
         {
             if (ci > -1)
             {
-                comm.CommandText = "delete from rai.tbldept where DNo=@dno";
+                comm.CommandText = "sp_deletedept";
                 comm.Connection = conn;
-                comm.CommandType = CommandType.Text;
+                comm.CommandType = CommandType.StoredProcedure;
 
                 comm.Parameters.AddWithValue("@dno", txtDNo.Text);
 

@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,11 +141,22 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "DNO";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(606, 129);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(166, 50);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Reset";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmSqlDept
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 658);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.dgv1);
             this.Controls.Add(this.btnDelete);
@@ -180,5 +192,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDNo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

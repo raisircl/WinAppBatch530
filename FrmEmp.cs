@@ -20,8 +20,8 @@ namespace WinAppBatch530
 
         SqlConnection conn = new SqlConnection();
         SqlCommand comm = new SqlCommand();
-        DataSet ds = new DataSet();
-        DataSet ds1 = new DataSet();
+        DataSet ds = new DataSet(); // emp
+        DataSet ds1 = new DataSet(); //dept
 
         SqlDataAdapter da = new SqlDataAdapter();
         int ci = -1;
@@ -52,6 +52,7 @@ namespace WinAppBatch530
             da.SelectCommand = comm;
 
             da.Fill(ds1, "dept");
+           
             cmbDept.DataSource = ds1.Tables["dept"];
             cmbDept.DisplayMember = "DName";
             cmbDept.ValueMember = "DNo";
@@ -59,7 +60,7 @@ namespace WinAppBatch530
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            comm.CommandText = "insert into tblemp(ename,dno) values(@ename,@dno)";
+            comm.CommandText = "insert into tblemp(ename,dno) values(@ename,@dno";
             comm.Connection = conn;
             comm.CommandType = CommandType.Text;
             comm.Parameters.AddWithValue("@ename", txtEname.Text);
@@ -75,3 +76,11 @@ namespace WinAppBatch530
         }
     }
 }
+/*
+ 1. tblCountries => Form => CRU => Cid, CName, CCode, AddOn, UpdateOn, RecStatus (1,2,3)
+ 2. tblStates =>  Form => Add State Against Country 
+ 3. tblDistricts => Form => Add District Against State
+ 4. tblCities => Form => Add City Against District
+ 5. tblemployee => CID, State, Dis, City
+ 
+ */
